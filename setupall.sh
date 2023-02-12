@@ -26,6 +26,7 @@ echo "Bash..."
 pax -v -f bash.pax.Z > tmpfile
 bashpath=`head -n 1 tmpfile | cut -c55-100`
 pax -rf bash.pax.Z
+rm bash.pax.Z
 mv $bashpath gitzot/bash
 rm tmpfile
 
@@ -34,6 +35,7 @@ echo "Perl..."
 pax -v -f perl.pax.Z > tmpfile
 perlpath=`head -n 1 tmpfile | cut -c55-100`
 pax -rf perl.pax.Z
+rm perl.pax.Z
 mv $perlpath gitzot/perl
 rm tmpfile
 
@@ -42,6 +44,7 @@ echo "Ncurses..."
 pax -v -f ncurses.pax.Z > tmpfile
 ncursespath=`head -n 1 tmpfile | cut -c55-100`
 pax -rf ncurses.pax.Z
+rm ncurses.pax.Z
 mv $ncursespath gitzot/ncurses
 rm tmpfile
 
@@ -50,6 +53,7 @@ echo "Git..."
 pax -v -f git.pax.Z > tmpfile
 gitpath=`head -n 1 tmpfile | cut -c55-100`
 pax -rf git.pax.Z
+rm git.pax.Z
 mv $gitpath gitzot/git
 rm tmpfile
 
