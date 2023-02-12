@@ -56,7 +56,7 @@ echo "# wizardofzos, 2023" > $env
 echo "" > $env
 for var in BASH_HOME CURL_CA_BUNDLE GIT_EXEC_PATH GIT_HOME GIT_PAGER GIT_SSL_CAINFO GIT_TEMPLATE_DIR LIBPATH MANPATH NCURSES_HOME PATH PARL5LIB PERL5_HOME TERM TERMINFO _BPXK_AUTOCVT _CC_RUNOPTS _CEE_RUNOPTS _CXX_RUNOPTS _TAG_REDIR_ERR _TAG_REDIR_IN  _TAG_REDIR_OUT
 do
-    l=$(export | grep ^$var | cut -d= -f2)
+    l=$(export | grep ^$var= | cut -d= -f2)
     echo "$var=$l" >> $env
 done
 
