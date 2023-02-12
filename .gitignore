@@ -1,0 +1,4 @@
+*.Z
+gitinstaller.sh 
+.pack*
+gitzot/*
