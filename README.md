@@ -10,6 +10,12 @@ Then execute the setupall.sh (e.g. sh setupall.sh)
 This will download (using curl) pax.Z files for bash, git, ncurses, and perl.
 These will then be un/de-paxed and processed to create gitinstaller.sh
 
+## Pre-Requisite (curl)
+
+If you do not have curl installed then use these commands to get it:
+
+`pax -rf <(curl -o - -L https://github.com/ZOSOpenTools/curlport/releases/download/curlport_511/curl-7.83.1.20230209_115914.zos.pax.Z) && cd curl-7.83.1.20230209_115914.zos && . ./.env`
+
 ## Workings...
 This will generate a oneclick installer for git from ZOT.
 *Make* sure to have enough space for running the resulting gitinstaller.sh
