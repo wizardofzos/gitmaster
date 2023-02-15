@@ -1,9 +1,18 @@
 # onclickzotgit
 OneClick Installer Creator for https://github.com/ZOSOpenTools/gitport
 
+## Installation
+
+Git clone this repository.
+
+Then execute the setupall.sh (e.g. sh setupall.sh)
+
+This will download (using curl) pax.Z files for bash, git, ncurses, and perl.
+These will then be un/de-paxed and processed to create gitinstaller.sh
+
 ## Workings...
 This will generate a oneclick installer for git from ZOT.
-Make sure to have enough space for running the resulting gitinstaller.sh
+*Make* sure to have enough space for running the resulting gitinstaller.sh
 
 ## Versions
 
