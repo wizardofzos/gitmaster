@@ -25,7 +25,7 @@ read dest
 mkdir -p $dest 
 # copy all to that location
 
-echo "Copying to destsination folder"
+echo "Copying to destination folder"
 cp -R distfolder/* $dest/
 rm -rf distfolder   # maybe make this a move :)
 
