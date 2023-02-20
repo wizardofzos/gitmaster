@@ -29,7 +29,7 @@ This will generate a oneclick installer for git from ZOT. You need some space to
 
 Currently embedded versions
 
-* https://github.com/ZOSOpenTools/bashport/releases/download/bashport_518/bash-5.2.20230210_170433.zos.pax.Z 
+* https://github.com/ZOSOpenTools/bashport/releases/download/bashport_605/bash-5.2.20230218_210446.zos.pax.Z 
 * https://github.com/ZOSOpenTools/perlport/releases/download/perlport_531/perl5-blead.20230210_213003.zos.pax.Z 
 * https://github.com/ZOSOpenTools/ncursesport/releases/download/ncursesport_618/ncurses-6.3.20230219_035409.zos.pax.Z
 * https://github.com/ZOSOpenTools/gitport/releases/download/gitport_519/git-2.39.1.20230210_171810.zos.pax.Z 

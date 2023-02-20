@@ -10,7 +10,7 @@ mkdir gitzot
 
 # Get bash, perl, ncurses and git
 echo "Getting bash"
-curl -k -L -s https://github.com/ZOSOpenTools/bashport/releases/download/bashport_518/bash-5.2.20230210_170433.zos.pax.Z --output bash.pax.Z 
+curl -k -L -s https://github.com/ZOSOpenTools/bashport/releases/download/bashport_605/bash-5.2.20230218_210446.zos.pax.Z --output bash.pax.Z 
 echo " - unpaxing.."
 pax -v -f bash.pax.Z > tmpfile
 bashpath=`head -n 1 tmpfile | cut -c55-100`
