@@ -4,13 +4,13 @@
 # wizardofzos 2023
 
 # Get bash, perl, ncurses and git
-echo "Getting bash"
+echo "Getting Bash"
 curl -k -L -s https://github.com/ZOSOpenTools/bashport/releases/download/bashport_518/bash-5.2.20230210_170433.zos.pax.Z --output bash.pax.Z 
-echo "Getting perl"
+echo "Getting Perl"
 curl -k -L -s https://github.com/ZOSOpenTools/perlport/releases/download/perlport_531/perl5-blead.20230210_213003.zos.pax.Z --output perl.pax.Z
-echo "Getting ncurses"
+echo "Getting Ncurses"
 curl -k -L -s https://github.com/ZOSOpenTools/ncursesport/releases/download/ncursesport_521/ncurses-6.3.20230210_180151.zos.pax.Z --output ncurses.pax.Z
-echo "Getting git"
+echo "Getting Git"
 curl -k -L -s https://github.com/ZOSOpenTools/gitport/releases/download/gitport_519/git-2.39.1.20230210_171810.zos.pax.Z --output git.pax.Z 
 
 
