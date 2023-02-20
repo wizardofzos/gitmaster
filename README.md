@@ -1,4 +1,4 @@
-# oneclickzotgit
+# gitmaster
 OneClick Installer Creator for https://github.com/ZOSOpenTools/gitport
 
 ## Installation
