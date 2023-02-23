@@ -42,6 +42,17 @@ echo " - moving into place"
 mv $ncursespath gitzot/ncurses
 rm tmpfile
 
+echo "Getting less"  
+curl -k -L -s https://github.com/ZOSOpenTools/lessport/releases/download/lessport_549/less-608.20230215_172444.zos.pax.Z --output less.pax.Z 
+echo " - unpaxing.."
+pax -v -f less.pax.Z > tmpfile
+lesspath=`head -n 1 tmpfile | cut -c55-100`
+pax -rf less.pax.Z
+rm less.pax.Z
+echo " - moving into place"
+mv $lesspath gitzot/less
+rm tmpfile
+
 echo "Getting git"
 curl -k -L -s https://github.com/ZOSOpenTools/gitport/releases/download/gitport_519/git-2.39.1.20230210_171810.zos.pax.Z --output git.pax.Z 
 echo " - unpaxing.."

@@ -40,6 +40,7 @@ echo ""
 echo " - bash-5.2.20230210_170433"
 echo " - perl5-blead.20230210_213003"
 echo " - ncurses-6.3.20230219_035409"
+echo " - less-608.20230215_172444"
 echo " - git-2.39.1.20230210_171810"
 echo ""
 echo "Press [Enter] to specify installation destination"
@@ -82,6 +83,9 @@ cd $dest/perl && . ./.env
 
 # Ncurses
 cd $dest/ncurses && . ./.env
+
+# Less
+cd $dest/less && . ./.env
 
 # And finally git (CEE3501S The module CXXRT64 was not found. might occur?)
 cd $dest/git && . ./.env
