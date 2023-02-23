@@ -92,6 +92,7 @@ cd $dest/git && . ./.env
 
 # Now we have all in EXPORTed variables we need.... 
 # better create the ENVFILE with parts we want...
+echo "Creating envfile"
 env=$dest/envfile
 rm -f $env
 echo "#" >> $env
@@ -102,14 +103,16 @@ echo "# the end of your .profile, or source via '. $dest/envfile'." >> $env
 echo "#" >> $env
 echo "# wizardofzos, 2023" >> $env 
 echo "#" >> $env
-for var in BASH_HOME CURL_CA_BUNDLE GIT_EXEC_PATH GIT_HOME GIT_PAGER \
-GIT_SSL_CAINFO GIT_TEMPLATE_DIR LIBPATH MANPATH NCURSES_HOME PATH \
+for var in BASH_HOME GIT_EXEC_PATH GIT_HOME GIT_PAGER \
+GIT_TEMPLATE_DIR LIBPATH MANPATH NCURSES_HOME PATH \
 PERL5LIB PERL5_HOME TERM TERMINFO _BPXK_AUTOCVT _CC_RUNOPTS _CEE_RUNOPTS \
  _CXX_RUNOPTS _TAG_REDIR_ERR _TAG_REDIR_IN  _TAG_REDIR_OUT
 do
     l=$(export | grep ^$var= | cut -d= -f2)
     echo "export $var=$l" >> $env
 done
+echo "export GIT_SSL_CAINFO=$dest/cacert.pem" >> $env
+
 
 echo "That was easy! Source $dest/envfile and try 'git' :)"
 

@@ -64,6 +64,10 @@ echo " - moving into place"
 mv $gitpath gitzot/git
 rm tmpfile
 
+echo "Getting CA Certs (from https://curl.se/ca/cacert.pem)"
+pemloc=`pwd`/gitzot/cacert.pem
+curl -k -L -s https://curl.se/ca/cacert.pem --output $pemloc
+
 echo "All done, packaging with zdopack"
 # Use code from to zdopack craft a proper receiver (that takes care of all the .env stuff :) 
 srcuss=`pwd`/gitzot
