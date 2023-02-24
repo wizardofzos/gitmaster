@@ -65,7 +65,7 @@ mv $gitpath gitzot/git
 rm tmpfile
 
 echo "Getting CA Certs (from https://curl.se/ca/cacert.pem)"
-pemloc=`pwd`/gitzot/cacert.pem
+pemloc=`pwd`/gitzot/cacert.pem  
 curl -k -L -s https://curl.se/ca/cacert.pem --output $pemloc
 
 echo "All done, packaging with zdopack"

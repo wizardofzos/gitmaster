@@ -55,6 +55,7 @@ echo "Folder to install git (and prereqs) to (no trailing slash): \c"
 read dest
 
 echo "Grabbing mime-data from shell script."
+echo "This might take a while, go grab a coffee, you've deserved it."
 tail -n+$ARCHIVE $0 > mimefile
 echo "Decoding it to pax file"
 uudecode -o file.pax mimefile
@@ -92,7 +93,24 @@ cd $dest/git && . ./.env
 
 # Now we have all in EXPORTed variables we need.... 
 # better create the ENVFILE with parts we want...
-echo "Creating envfile"
+echo "                                                            ";
+echo "'########:'##::: ##:'##::::'##:'########:'####:'##:::::::'########:";
+echo " ##.....:: ###:: ##: ##:::: ##: ##.....::. ##:: ##::::::: ##.....::";
+echo " ##::::::: ####: ##: ##:::: ##: ##:::::::: ##:: ##::::::: ##:::::::";
+echo " ######::: ## ## ##: ##:::: ##: ######:::: ##:: ##::::::: ######:::";
+echo " ##...:::: ##. ####:. ##:: ##:: ##...::::: ##:: ##::::::: ##...::::";
+echo " ##::::::: ##:. ###::. ## ##::: ##:::::::: ##:: ##::::::: ##:::::::";
+echo " ########: ##::. ##:::. ###:::: ##:::::::'####: ########: ########:";
+echo "........::..::::..:::::...:::::..::::::::....::........::........::";                      
+echo ""
+for var in BASH_HOME GIT_EXEC_PATH GIT_HOME GIT_PAGER \
+GIT_TEMPLATE_DIR LIBPATH MANPATH NCURSES_HOME PATH \
+PERL5LIB PERL5_HOME TERM TERMINFO _BPXK_AUTOCVT _CC_RUNOPTS _CEE_RUNOPTS \
+ _CXX_RUNOPTS _TAG_REDIR_ERR _TAG_REDIR_IN  _TAG_REDIR_OUT
+do
+    l=$(export | grep ^$var= | cut -d= -f2)
+     
+done
 env=$dest/envfile
 rm -f $env
 echo "#" >> $env
@@ -105,15 +123,20 @@ echo "# wizardofzos, 2023" >> $env
 echo "#" >> $env
 for var in BASH_HOME GIT_EXEC_PATH GIT_HOME GIT_PAGER \
 GIT_TEMPLATE_DIR LIBPATH MANPATH NCURSES_HOME PATH \
-PERL5LIB PERL5_HOME TERM TERMINFO _BPXK_AUTOCVT _CC_RUNOPTS _CEE_RUNOPTS \
+PERL5LIB PERL5_HOME TERM _BPXK_AUTOCVT _CC_RUNOPTS _CEE_RUNOPTS \
  _CXX_RUNOPTS _TAG_REDIR_ERR _TAG_REDIR_IN  _TAG_REDIR_OUT
 do
     l=$(export | grep ^$var= | cut -d= -f2)
     echo "export $var=$l" >> $env
+    echo "$var=$l"
 done
 echo "export GIT_SSL_CAINFO=$dest/cacert.pem" >> $env
-
-
+echo "export GIT_SSL_CAINFO=$dest/cacert.pem"
+# Terminfo not set by ncurses installer?
+echo "export TERMINFO=$dest/ncurses/share/terminfo" >> $env
+echo "export TERMINFO=$dest/ncurses/share/terminfo"
+echo ""
+echo ""
 echo "That was easy! Source $dest/envfile and try 'git' :)"
 
 exit 0
