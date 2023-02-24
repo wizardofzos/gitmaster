@@ -4,8 +4,11 @@
 # wizardofzos 2023
 
 # clear previous muck
+echo "Cleanup previous run..."
 rm -rf gitzot
 mkdir gitzot
+rm -rf .pack-work-dir
+mkdir .pack-work-dir
 
 
 # Get bash, perl, ncurses and git
@@ -76,6 +79,6 @@ echo "Paxing your USS folder to $workdir/paxfile"
 pax -o saveext -s ",$srcuss,distfolder," -wzvf  $workdir/file.pax $srcuss
 echo "Mime encoding it to $workdir/mimefile"
 uuencode -m $workdir/file.pax $workdir/mimefile > $workdir/mimefile
-echo "Creating the receiver"
-cat template.sh $workdir/mimefile > gitinstaller.sh
+echo "Creating gitmaster.sh"
+cat template.sh $workdir/mimefile > gitmaster.sh
 
