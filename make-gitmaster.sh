@@ -57,7 +57,7 @@ mv $lesspath gitzot/less
 rm tmpfile
 
 echo "Getting git"
-curl -k -L -s https://github.com/ZOSOpenTools/gitport/releases/download/gitport_519/git-2.39.1.20230210_171810.zos.pax.Z --output git.pax.Z 
+curl -k -L -s https://github.com/ZOSOpenTools/gitport/releases/download/gitport_748/git-2.39.2.20230313_123033.zos.pax.Z --output git.pax.Z 
 echo " - unpaxing.."
 pax -v -f git.pax.Z > tmpfile
 gitpath=`head -n 1 tmpfile | cut -c55-100`
