@@ -52,11 +52,11 @@ After downloading (or building) the gitinstaller.sh and uploading it to you Main
 
     Packages and version that will be installed:
 
-    - bash-5.2.20230210_170433
-    - perl5-blead.20230210_213003
-    - ncurses-6.3.20230219_035409
-    - less-608.20230215_172444
-    - git-2.39.1.20230210_171810
+    - bash-5.2.20230226_190557
+    - perl5-blead.20230316_225400
+    - ncurses-6.3.20230306_010811
+    - less-608.20230306_103304
+    - git-2.39.2.20230313_123033
 
     Press [Enter] to specify installation destination
     (or Q to quit now (but why would you?)

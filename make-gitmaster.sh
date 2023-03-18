@@ -13,7 +13,7 @@ mkdir .pack-work-dir
 
 # Get bash, perl, ncurses and git
 echo "Getting bash"
-curl -k -L -s https://github.com/ZOSOpenTools/bashport/releases/download/bashport_605/bash-5.2.20230218_210446.zos.pax.Z --output bash.pax.Z 
+curl -k -L -s https://github.com/ZOSOpenTools/bashport/releases/download/bashport_646/bash-5.2.20230226_190557.zos.pax.Z --output bash.pax.Z 
 echo " - unpaxing.."
 pax -v -f bash.pax.Z > tmpfile
 bashpath=`head -n 1 tmpfile | cut -c55-100`
@@ -24,7 +24,7 @@ mv $bashpath gitzot/bash
 rm tmpfile
 
 echo "Getting perl"
-curl -k -L -s https://github.com/ZOSOpenTools/perlport/releases/download/perlport_531/perl5-blead.20230210_213003.zos.pax.Z --output perl.pax.Z
+curl -k -L -s https://github.com/ZOSOpenTools/perlport/releases/download/perlport_761/perl5-blead.20230316_225400.zos.pax.Z --output perl.pax.Z
 echo " - unpaxing.."
 pax -v -f perl.pax.Z > tmpfile
 perlpath=`head -n 1 tmpfile | cut -c55-100`
@@ -35,7 +35,7 @@ mv $perlpath gitzot/perl
 rm tmpfile
 
 echo "Getting ncurses"
-curl -k -L -s https://github.com/ZOSOpenTools/ncursesport/releases/download/ncursesport_618/ncurses-6.3.20230219_035409.zos.pax.Z --output ncurses.pax.Z
+curl -k -L -s https://github.com/ZOSOpenTools/ncursesport/releases/download/ncursesport_682/ncurses-6.3.20230306_010811.zos.pax.Z --output ncurses.pax.Z
 echo " - unpaxing.."
 pax -v -f ncurses.pax.Z > tmpfile
 ncursespath=`head -n 1 tmpfile | cut -c55-100`
@@ -46,7 +46,7 @@ mv $ncursespath gitzot/ncurses
 rm tmpfile
 
 echo "Getting less"  
-curl -k -L -s https://github.com/ZOSOpenTools/lessport/releases/download/lessport_549/less-608.20230215_172444.zos.pax.Z --output less.pax.Z 
+curl -k -L -s https://github.com/ZOSOpenTools/lessport/releases/download/lessport_690/less-608.20230306_103304.zos.pax.Z --output less.pax.Z 
 echo " - unpaxing.."
 pax -v -f less.pax.Z > tmpfile
 lesspath=`head -n 1 tmpfile | cut -c55-100`
