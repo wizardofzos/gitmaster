@@ -162,8 +162,9 @@ Luckily after the WARNING, the diff shows properly (can't show colors here :( )
 
 Currently embedded versions
 
-* https://github.com/ZOSOpenTools/bashport/releases/download/bashport_605/bash-5.2.20230218_210446.zos.pax.Z 
-* https://github.com/ZOSOpenTools/perlport/releases/download/perlport_531/perl5-blead.20230210_213003.zos.pax.Z 
-* https://github.com/ZOSOpenTools/ncursesport/releases/download/ncursesport_618/ncurses-6.3.20230219_035409.zos.pax.Z
-* https://github.com/ZOSOpenTools/lessport/releases/download/lessport_549/less-608.20230215_172444.zos.pax.Z
-* https://github.com/ZOSOpenTools/gitport/releases/download/gitport_519/git-2.39.1.20230210_171810.zos.pax.Z 
+* https://github.com/ZOSOpenTools/bashport/releases/download/bashport_605/bash-5.2.20230226_190557.zos.pax.Z 
+* https://github.com/ZOSOpenTools/perlport/releases/download/perlport_531/perl5-blead.20230316_225400.zos.pax.Z 
+* https://github.com/ZOSOpenTools/ncursesport/releases/download/ncursesport_618/ncurses-6.3.20230306_010811.zos.pax.Z
+* https://github.com/ZOSOpenTools/lessport/releases/download/lessport_549/less-608.20230306_103304.zos.pax.Z
+* https://github.com/ZOSOpenTools/gitport/releases/download/gitport_519/git-2.39.2.20230313_123033.zos.pax.Z 
+
