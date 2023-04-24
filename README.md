@@ -27,7 +27,6 @@ This will generate a oneclick installer for git from ZOT. You need some space to
 After downloading (or building) the gitinstaller.sh and uploading it to you Mainframe you must run gitinstaller.sh like so:
 
     >sh gitinstaller.sh
-    terminals database is inaccessible
     ======================================================================
     ==      =============  =====  ============EPLS Git Installer for z/OS=
     =   ==   ============   ===   ========================================
@@ -46,16 +45,6 @@ After downloading (or building) the gitinstaller.sh and uploading it to you Main
     All files will be owned by IBMUSER (logon to another user if need be).
     Make sure you have at least 200MB free space in the target location.
 
-    Packages and versions that will be installed:
-
-    - bash-5.2.20230226_190557
-    - perl5-blead.20230316_225400
-    - ncurses-6.3.20230306_010811
-    - less-608.20230306_103304
-    - git-2.39.2.20230313_123033
-
-    Press [Enter] to specify installation destination
-    (or Q to quit now (but why would you?)
 
 You can then CTRL-C or press Q followed by ENTER to stop the installation
 When continuing (just press ENTER) you're asked where to install the bundle.
@@ -115,9 +104,7 @@ After the installation scripts from the various ZOSOpenTools products (still nee
     PERL5_HOME="/prj/git005/perl"
     TERM="xterm"
     _BPXK_AUTOCVT="ON"
-    _CC_RUNOPTS=""
     _CEE_RUNOPTS="FILETAG(AUTOCVT,AUTOTAG) POSIX(ON)"
-    _CXX_RUNOPTS=""
     _TAG_REDIR_ERR="txt"
     _TAG_REDIR_IN="txt"
     _TAG_REDIR_OUT="txt"
@@ -152,13 +139,3 @@ Luckily after the WARNING, the diff shows properly (can't show colors here :( )
     +
     +After downloading (or building) the gitinstaller.sh and uploading it to you Mainframe yo umust run gitinstaller.sh like so:
     +
-
-## Versions
-
-Currently embedded versions
-
-* https://github.com/ZOSOpenTools/bashport/releases/download/bashport_605/bash-5.2.20230226_190557.zos.pax.Z
-* https://github.com/ZOSOpenTools/perlport/releases/download/perlport_531/perl5-blead.20230316_225400.zos.pax.Z
-* https://github.com/ZOSOpenTools/ncursesport/releases/download/ncursesport_618/ncurses-6.3.20230306_010811.zos.pax.Z
-* https://github.com/ZOSOpenTools/lessport/releases/download/lessport_549/less-608.20230306_103304.zos.pax.Z
-* https://github.com/ZOSOpenTools/gitport/releases/download/gitport_519/git-2.39.2.20230313_123033.zos.pax.Z

@@ -35,15 +35,15 @@ echo "without the need for a connection to github from your Mainframe."
 echo "All files will be owned by $LOGNAME (logon to another user if need be)."
 echo "Make sure you have at least 200MB free space in the target location."
 echo ""
-echo "Press [Enter] to specify installation destination"
-echo "(or Q to quit now (but why would you?)\c"
+echo "Press [Enter] to specify installation destination \
+(or Q to quit now (but why would you?)"
 read goon
 if [[ ! -z "$goon" ]]; then 
   echo ""
   echo "Sorry to see you leave..."
   exit
 fi
-echo "Folder to install git (and prereqs) to (no trailing slash): \c"
+echo "Folder to install git (and prereqs) to (no trailing slash): "
 read dest
 
 echo "Grabbing mime-data from this shell script,might take a while, \
@@ -65,10 +65,12 @@ mkdir -p $dest
 
 echo "Copying to destination folder ($dest)"
 cp -R distfolder/* $dest/
-rm -rf distfolder   # maybe make this a move :)
+#rm -rf distfolder   # maybe make this a move :)
 
 # Tools are now "installed" to that location, better set them up...
 echo "Now running the .env installers from the ZOSOpenTools..."
+echo "You might get a $dest/bash/bin/bashbug.tmp is read only. Remove anyway ? message..."
+echo "Also possible in the perl folder..."
 # First .env from bash...
 cd $dest/bash && . ./.env 
 
