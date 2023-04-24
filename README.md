@@ -1,4 +1,5 @@
 # gitmaster
+
 OneClick Installer Creator for https://github.com/ZOSOpenTools/gitport
 
 ## Installation
@@ -13,7 +14,7 @@ This gitinstaller.sh will have all the packages embedded within it and will 'sel
 
 ## Pre-Requisite (curl)
 
-If you do not have curl installed then use these commands to get it:
+If you do not have perl installed then use these commands to get it:
 
     curl -k -L -s https://github.com/ZOSOpenTools/perlport/releases/download/perlport_531/perl5-blead.20230210_213003.zos.pax.Z --output perl.pax.Z
     pax -rf perl.pax.Z
@@ -21,13 +22,14 @@ If you do not have curl installed then use these commands to get it:
     . ./.env
 
 ## Workings...
+
 This will generate a oneclick installer for git from ZOT. You need some space to build the installer, a zFS with 864000 blocks would do.
 
 *Make sure* to have enough space for running the resulting gitinstaller.sh
 
 # Usage overview
 
-After downloading (or building) the gitinstaller.sh and uploading it to you Mainframe yo umust run gitinstaller.sh like so:
+After downloading (or building) the gitinstaller.sh and uploading it to you Mainframe you must run gitinstaller.sh like so:
 
     >sh gitinstaller.sh
     terminals database is inaccessible
@@ -44,13 +46,12 @@ After downloading (or building) the gitinstaller.sh and uploading it to you Main
     ======================================================================
                                 https://github.com/wizardofzos/gitmaster
 
-
     This will install git (and prereqs) from https://github.com/ZOSOpenTools
-    without the need for a connection to github from your Mainframe.
+    without the need for a connection to GitHub from your Mainframe.
     All files will be owned by IBMUSER (logon to another user if need be).
     Make sure you have at least 200MB free space in the target location.
 
-    Packages and version that will be installed:
+    Packages and versions that will be installed:
 
     - bash-5.2.20230226_190557
     - perl5-blead.20230316_225400
@@ -63,7 +64,7 @@ After downloading (or building) the gitinstaller.sh and uploading it to you Main
 
 You can then CTRL-C or press Q followed by ENTER to stop the installation
 When continuing (just press ENTER) you're asked where to install the bundle.
-This example uses /prj/git005. Make sure this folder (and the zfs containing it) has
+This example uses /prj/git005. Make sure this folder (and the ZFS containing it) has
 enouth space (500 CYLS should definately do it)
 
     Folder to install git (and prereqs) to (no trailing slash): /prj/git005
@@ -128,7 +129,6 @@ After the installation scripts from the various ZOSOpenTools products (still nee
     export GIT_SSL_CAINFO=/prj/git005/cacert.pem
     export TERMINFO=/prj/git005/ncurses/share/terminfo
 
-
     That was easy! Source /prj/git005/envfile and try 'git' :)
 
 After sourcing that file (you can append to your .profile) the products will be usable.
@@ -139,7 +139,7 @@ After sourcing that file (you can append to your .profile) the products will be 
 
 The terminal settings still don't work 100% (gotta see if that's something this installer messes up, or if ncurses itself does that...)
 
-    >git diff README.md 
+    >git diff README.md
     WARNING: terminal is not fully functional
     Press RETURN to continue
 
@@ -162,9 +162,8 @@ Luckily after the WARNING, the diff shows properly (can't show colors here :( )
 
 Currently embedded versions
 
-* https://github.com/ZOSOpenTools/bashport/releases/download/bashport_605/bash-5.2.20230226_190557.zos.pax.Z 
-* https://github.com/ZOSOpenTools/perlport/releases/download/perlport_531/perl5-blead.20230316_225400.zos.pax.Z 
+* https://github.com/ZOSOpenTools/bashport/releases/download/bashport_605/bash-5.2.20230226_190557.zos.pax.Z
+* https://github.com/ZOSOpenTools/perlport/releases/download/perlport_531/perl5-blead.20230316_225400.zos.pax.Z
 * https://github.com/ZOSOpenTools/ncursesport/releases/download/ncursesport_618/ncurses-6.3.20230306_010811.zos.pax.Z
 * https://github.com/ZOSOpenTools/lessport/releases/download/lessport_549/less-608.20230306_103304.zos.pax.Z
-* https://github.com/ZOSOpenTools/gitport/releases/download/gitport_519/git-2.39.2.20230313_123033.zos.pax.Z 
-
+* https://github.com/ZOSOpenTools/gitport/releases/download/gitport_519/git-2.39.2.20230313_123033.zos.pax.Z
