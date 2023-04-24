@@ -12,7 +12,7 @@ This will download (using curl) pax.Z files for bash, git, ncurses, and perl.
 These will then be un/de-paxed and processed to create gitinstaller.sh.
 This gitinstaller.sh will have all the packages embedded within it and will 'self-extract' them from the script :)
 
-## Pre-Requisite (curl)
+## Pre-Requisite (perl)
 
 If you do not have perl installed then use these commands to get it:
 
