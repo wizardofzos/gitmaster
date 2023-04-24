@@ -12,14 +12,9 @@ This will download (using curl) pax.Z files for bash, git, ncurses, and perl.
 These will then be un/de-paxed and processed to create gitinstaller.sh.
 This gitinstaller.sh will have all the packages embedded within it and will 'self-extract' them from the script :)
 
-## Pre-Requisite (perl)
+## Pre-Requisite (curl)
 
-If you do not have perl installed then use these commands to get it:
-
-    curl -k -L -s https://github.com/ZOSOpenTools/perlport/releases/download/perlport_531/perl5-blead.20230210_213003.zos.pax.Z --output perl.pax.Z
-    pax -rf perl.pax.Z
-    cd /path/to/where/it/unpaxed
-    . ./.env
+If you do not have curl installed then get it from https://github.com/ZOSOpenTools/curlport/releases/latest 
 
 ## Workings...
 
