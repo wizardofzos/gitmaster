@@ -11,9 +11,16 @@ rm -rf .pack-work-dir
 mkdir .pack-work-dir
 
 
+# URL's
+GITPAX=https://github.com/ZOSOpenTools/gitport/releases/download/Releaseline_gitport_918/git-2.39.2.20230417_063629.zos.pax.Z
+BASHPAX=https://github.com/ZOSOpenTools/bashport/releases/download/Releaseline_bashport_906/bash-5.2.15.20230416_201300.zos.pax.Z
+PERLPAX=https://github.com/ZOSOpenTools/perlport/releases/download/Releaseline_perlport_922/perl5-blead.20230417_074329.zos.pax.Z
+NCURSESPAX=https://github.com/ZOSOpenTools/ncursesport/releases/download/Releaseline_ncursesport_923/ncurses-6.3.20230417_110611.zos.pax.Z
+LESSPAX=https://github.com/ZOSOpenTools/lessport/releases/download/Releaseline_lessport_911/less-608.20230416_234518.zos.pax.Z
+
 # Get bash, perl, ncurses and git
 echo "Getting bash"
-curl -k -L -s https://github.com/ZOSOpenTools/bashport/releases/download/bashport_646/bash-5.2.20230226_190557.zos.pax.Z --output bash.pax.Z 
+curl -k -L -s $BASHPAX --output bash.pax.Z 
 echo " - unpaxing.."
 pax -v -f bash.pax.Z > tmpfile
 bashpath=`head -n 1 tmpfile | cut -c55-100`
@@ -24,7 +31,7 @@ mv $bashpath gitzot/bash
 rm tmpfile
 
 echo "Getting perl"
-curl -k -L -s https://github.com/ZOSOpenTools/perlport/releases/download/perlport_761/perl5-blead.20230316_225400.zos.pax.Z --output perl.pax.Z
+curl -k -L -s $PERLPAX --output perl.pax.Z
 echo " - unpaxing.."
 pax -v -f perl.pax.Z > tmpfile
 perlpath=`head -n 1 tmpfile | cut -c55-100`
@@ -35,7 +42,7 @@ mv $perlpath gitzot/perl
 rm tmpfile
 
 echo "Getting ncurses"
-curl -k -L -s https://github.com/ZOSOpenTools/ncursesport/releases/download/ncursesport_682/ncurses-6.3.20230306_010811.zos.pax.Z --output ncurses.pax.Z
+curl -k -L -s $NCURSESPAX --output ncurses.pax.Z
 echo " - unpaxing.."
 pax -v -f ncurses.pax.Z > tmpfile
 ncursespath=`head -n 1 tmpfile | cut -c55-100`
@@ -46,7 +53,7 @@ mv $ncursespath gitzot/ncurses
 rm tmpfile
 
 echo "Getting less"  
-curl -k -L -s https://github.com/ZOSOpenTools/lessport/releases/download/lessport_690/less-608.20230306_103304.zos.pax.Z --output less.pax.Z 
+curl -k -L -s $LESSPAX --output less.pax.Z 
 echo " - unpaxing.."
 pax -v -f less.pax.Z > tmpfile
 lesspath=`head -n 1 tmpfile | cut -c55-100`
@@ -57,7 +64,7 @@ mv $lesspath gitzot/less
 rm tmpfile
 
 echo "Getting git"
-curl -k -L -s https://github.com/ZOSOpenTools/gitport/releases/download/gitport_748/git-2.39.2.20230313_123033.zos.pax.Z --output git.pax.Z 
+curl -k -L -s $GITPAX --output git.pax.Z 
 echo " - unpaxing.."
 pax -v -f git.pax.Z > tmpfile
 gitpath=`head -n 1 tmpfile | cut -c55-100`
