@@ -6,7 +6,9 @@ OneClick Installer Creator for https://github.com/ZOSOpenTools/gitport
 
 Git clone this repository.
 
-Then execute the setupall.sh (e.g. sh setupall.sh)
+Make the make-gitmaster.sh cript executable with `chmod +x make-gitmaster.sh`
+
+Then execute `gitmaster.sh` (e.g. `sh make-gitmaster.sh`)
 
 This will download (using curl) pax.Z files for bash, git, ncurses, and perl.
 These will then be un/de-paxed and processed to create gitinstaller.sh.
@@ -14,7 +16,7 @@ This gitinstaller.sh will have all the packages embedded within it and will 'sel
 
 ## Pre-Requisite (curl)
 
-If you do not have curl installed then get it from https://github.com/ZOSOpenTools/curlport/releases/latest 
+If you do not have curl installed then get it from https://github.com/ZOSOpenTools/curlport/releases/latest
 
 ## Workings...
 
@@ -24,8 +26,9 @@ This will generate a oneclick installer for git from ZOT. You need some space to
 
 # Usage overview
 
-After downloading (or building) the gitinstaller.sh and uploading it to you Mainframe you must run gitinstaller.sh like so:
+After downloading (or building) the gitinstaller.sh and uploading it to you Mainframe you must run gitinstaller.sh (and make it executable) like so:
 
+    >chmod +x gitinstaller.sh
     >sh gitinstaller.sh
     ======================================================================
     ==      =============  =====  ============EPLS Git Installer for z/OS=
@@ -44,7 +47,6 @@ After downloading (or building) the gitinstaller.sh and uploading it to you Main
     without the need for a connection to GitHub from your Mainframe.
     All files will be owned by IBMUSER (logon to another user if need be).
     Make sure you have at least 200MB free space in the target location.
-
 
 You can then CTRL-C or press Q followed by ENTER to stop the installation
 When continuing (just press ENTER) you're asked where to install the bundle.
